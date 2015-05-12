@@ -1041,7 +1041,17 @@ else ifeq ($(TARGET_DEVICE), nex)
     TARGET_SCREEN_WIDTH := 480
     BRIGHTNESS_SYS_FILE := "/sys/class/leds/lcd-backlight/brightness"
 
+#MegaFon Login Plus (mfloginph)
+else ifeq ($(TARGET_DEVICE), mfloginph)
+    TARGET_COMMON_NAME := MegaFon Login Plus (mfloginph)
+    TARGET_SCREEN_HEIGHT := 960
+    TARGET_SCREEN_WIDTH := 540
+    BRIGHTNESS_SYS_FILE := "/sys/class/leds/lcd-backlight/brightness"
+    BOARD_HAS_LOW_RESOLUTION := true
+    BOARD_USE_MTK_LAYOUT := true
+    BOARD_MTK_BOOT_LABEL := "/bootimg"
 endif
+
 #---- end device specific config
 
 
